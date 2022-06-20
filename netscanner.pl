@@ -12,6 +12,6 @@ while ($counter != 256)
     $receiver = $wifiip . $counter;
     print "testing $receiver\n";
     $ping = Net::Ping->new() or die "Can't create new ping object: $!\n"; 
-    print "\nonline $receiver\n" if $ping->ping($receiver); 
+    print "online $receiver\n\n" if $ping->ping($receiver); 
     $counter ++;
 }
